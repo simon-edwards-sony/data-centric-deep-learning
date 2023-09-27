@@ -8,6 +8,11 @@ RUN sudo apt-get update \
     redis-server \
     && sudo rm -rf /var/lib/apt/lists/*
 
+# Install libgl1
+RUN sudo apt-get update \
+    && sudo apt-get install -y \
+    libgl1
+
 # Install python version
 RUN pyenv install 3.8.13
 RUN pyenv local 3.8.13
