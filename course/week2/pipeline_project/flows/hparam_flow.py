@@ -115,8 +115,7 @@ class DigitClassifierFlow(FlowSpec):
     # best_index: integer 
     #scores.append(inputs)
     scores = [input_data.callback.best_model_score for input_data in inputs]
-    best_index: scores.index(min(scores))
-
+    best_index = scores.index(min(scores))
     # ================================
 
     # sanity check for scores length
